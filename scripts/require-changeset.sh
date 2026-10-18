@@ -13,6 +13,13 @@ if [[ "${GITHUB_HEAD_REF:-}" == changeset-release/* ]]; then
   exit 0
 fi
 
+# PR dependabot mengganti lockfile/package.json secara mekanis dan ditinjau
+# terpisah (CI + Security Scan) — changeset buatan manusia tidak diwajibkan.
+if [[ "${GITHUB_ACTOR:-}" == "dependabot[bot]" ]]; then
+  echo "PR dependabot — bump dependensi tidak memerlukan changeset."
+  exit 0
+fi
+
 changed="$(git diff --name-only "${base}"...HEAD)"
 
 if [ -z "$changed" ]; then
