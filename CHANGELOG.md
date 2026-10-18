@@ -4,6 +4,12 @@ Semua perubahan penting pada paket ini didokumentasikan di file ini.
 Format mengikuti [Keep a Changelog](https://keepachangelog.com/) dan
 [Semantic Versioning](https://semver.org/), dihasilkan otomatis oleh Changesets.
 
+## 0.1.2
+
+### Patch Changes
+
+- [#9](https://github.com/rempugwarga/design-system/pull/9) [`cf3a24f`](https://github.com/rempugwarga/design-system/commit/cf3a24f1120fd92156f67002c7ed757fadd25f82) Thanks [@ruangbercerita182-tech](https://github.com/ruangbercerita182-tech)! - Sertakan hasil build `dist/` pada paket yang dipublikasikan. Release workflow kini menjalankan build sebelum publish, ditambah guard `prepublishOnly`, sehingga paket terbit lengkap (0.1.1 terbit tanpa `dist/` membuat konsumen gagal resolve module).
+
 ## 0.1.1
 
 ### Patch Changes
