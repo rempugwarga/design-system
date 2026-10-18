@@ -49,7 +49,7 @@
     "@changesets/changelog-github": "^1.0.1",
     "@changesets/cli": "^3.0.3",
     "@module-federation/rsbuild-plugin": "^2.9.2",
-    "@module-federation/storybook-addon": "^4.0.1",
+    "@module-federation/storybook-addon": "^6.0.21",
     "@rsbuild/core": "2.2.13",
     "@rsbuild/plugin-react": "^2.1.0",
     "@rslib/core": ">=0.23.2",
