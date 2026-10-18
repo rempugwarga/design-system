@@ -26,6 +26,14 @@ jobs:
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version: 1.4.2
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org/
+          package-manager-cache: false
+
+      - name: Update npm
+        run: npm install -g npm@latest
       - run: bun install --frozen-lockfile
       - name: Create release PR atau publish paket
         uses: changesets/action@v1
