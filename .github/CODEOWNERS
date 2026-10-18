@@ -1,0 +1,15 @@
+# Ownership: Design System Team (@rempugwarga/design-system-team)
+# Kebijakan review wajib diterapkan melalui branch protection (lihat platform-ci/terraform/org).
+
+*       @rempugwarga/design-system-team @rempugwarga/platform-engineering
+
+# Kontrak publik & rilis
+/package.json                       @rempugwarga/design-system-team
+/.changeset/                        @rempugwarga/design-system-team
+/src/                               @rempugwarga/design-system-team
+/docs/                              @rempugwarga/design-system-team
+
+# Pipeline dan keamanan dikelola Platform Engineering
+/.github/                           @rempugwarga/platform-engineering
+/.gitleaks.toml                     @rempugwarga/platform-engineering
+/SECURITY.md                        @rempugwarga/platform-engineering

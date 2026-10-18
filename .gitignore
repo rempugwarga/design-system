@@ -1,0 +1,27 @@
+# Dependencies
+node_modules
+
+# Build output
+dist
+storybook-static
+coverage
+
+# Environment & secrets (JANGAN pernah menambahkan secret ke repo)
+.env
+.env.*
+!.env.example
+
+# Devenv
+.devenv*
+devenv.local.nix
+devenv.local.yaml
+
+# direnv
+.direnv
+
+# pre-commit
+.pre-commit-config.yaml
+
+# Editor & OS
+.DS_Store
+*.log

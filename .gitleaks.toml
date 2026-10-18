@@ -1,0 +1,12 @@
+# Kebijakan secret scanning (gitleaks).
+# Secret TIDAK BOLEH disimpan di repository. Pipeline CI menolak PR yang
+# mengandung kredensial; allowlist hanya untuk nilai uji lokal yang terpublikasi.
+title = "rempugwarga design-system"
+enable-rule = []
+
+[allowlist]
+description = "Nilai contoh/uji lokal yang bukan rahasia"
+paths = []
+regexes = [
+  '''localhost''',
+]

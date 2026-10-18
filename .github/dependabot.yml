@@ -1,0 +1,38 @@
+# Perubahan dependensi npm dan GitHub Actions diusulkan otomatis.
+# Reviewer: code owners repo (lihat .github/CODEOWNERS).
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    labels:
+      - dependencies
+    groups:
+      storybook:
+        patterns:
+          - '@storybook/*'
+          - 'storybook'
+          - 'storybook-*'
+      rstack:
+        patterns:
+          - '@rsbuild/*'
+          - '@rslib/*'
+          - '@rstest/*'
+      react:
+        patterns:
+          - 'react'
+          - 'react-dom'
+          - '@types/react'
+          - '@types/react-dom'
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    labels:
+      - dependencies
+      - ci

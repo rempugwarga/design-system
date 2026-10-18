@@ -1,0 +1,81 @@
+{
+  "name": "@rempugwarga/design-system",
+  "version": "0.1.0",
+  "description": "Design system rempugwarga: komponen React yang dikonsumsi melalui npm (semver) atau Module Federation remote",
+  "license": "UNLICENSED",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rempugwarga/design-system.git"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.cts",
+        "default": "./dist/cjs/index.cjs"
+      }
+    }
+  },
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rslib build",
+    "build:storybook": "storybook build",
+    "dev": "rslib build --watch",
+    "storybook": "storybook dev -p 6006",
+    "mf-dev": "rslib mf-dev",
+    "typecheck": "tsc --noEmit",
+    "test": "rstest run",
+    "test:watch": "rstest --watch",
+    "changeset": "changeset",
+    "check:changeset": "bash scripts/require-changeset.sh",
+    "version-packages": "changeset version",
+    "release": "changeset publish"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "packageManager": "bun@1.4.2",
+  "devDependencies": {
+    "@changesets/changelog-github": "^1.0.1",
+    "@changesets/cli": "^3.0.3",
+    "@module-federation/rsbuild-plugin": "^2.9.2",
+    "@module-federation/storybook-addon": "^4.0.1",
+    "@rsbuild/core": "2.1.4",
+    "@rsbuild/plugin-react": "^2.1.0",
+    "@rslib/core": ">=0.23.2",
+    "@rstest/core": "^0.12.3",
+    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/addon-interactions": "^8.4.7",
+    "@storybook/addon-links": "^8.4.7",
+    "@storybook/addon-onboarding": "^8.4.7",
+    "@storybook/blocks": "^8.4.7",
+    "@storybook/react": "^8.4.7",
+    "@storybook/test": "^8.4.7",
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/react": "^16.3.3",
+    "@types/node": "^22.13.9",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "~18.3.1",
+    "happy-dom": "^21.0.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rsbuild-plugin-publint": "^0.2.1",
+    "storybook": "^8.4.7",
+    "storybook-addon-rslib": "^1.0.1",
+    "storybook-react-rsbuild": "^1.0.1",
+    "typescript": "^5.7.3"
+  },
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  }
+}
