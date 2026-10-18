@@ -1,6 +1,6 @@
 {
   "name": "@rempugwarga/design-system",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Design system rempugwarga: komponen React yang dikonsumsi melalui npm (semver) atau Module Federation remote",
   "license": "UNLICENSED",
   "type": "module",
