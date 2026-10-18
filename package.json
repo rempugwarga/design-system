@@ -27,6 +27,7 @@
   ],
   "scripts": {
     "build": "rslib build",
+    "prepublishOnly": "rslib build",
     "build:storybook": "SKIP_PUBLINT=1 storybook build",
     "dev": "rslib build --watch",
     "storybook": "SKIP_PUBLINT=1 storybook dev -p 6006",
