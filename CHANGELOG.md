@@ -4,6 +4,12 @@ Semua perubahan penting pada paket ini didokumentasikan di file ini.
 Format mengikuti [Keep a Changelog](https://keepachangelog.com/) dan
 [Semantic Versioning](https://semver.org/), dihasilkan otomatis oleh Changesets.
 
+## 0.1.5
+
+### Patch Changes
+
+- [#25](https://github.com/rempugwarga/design-system/pull/25) [`8063590`](https://github.com/rempugwarga/design-system/commit/8063590a5adf68905a122e3e2265f5257ec70adb) Thanks [@ruangbercerita182-tech](https://github.com/ruangbercerita182-tech)! - Pemeliharaan tooling: migrasi Storybook 8 → 10 (`storybook@10.6.2`, `storybook-react-rsbuild` & `storybook-addon-rslib` v3.6.1), hapus paket yang di-SB9/10 dijadikan bawaan (`addon-essentials`, `addon-interactions`, `blocks`, `test`), dan tulis ulang `.storybook/main.ts` menjadi ESM murni (tanpa `require`/`getAbsolutePath`). Tidak ada perubahan API publik maupun isi `dist`.
+
 ## 0.1.4
 
 ### Patch Changes
