@@ -4,6 +4,12 @@ Semua perubahan penting pada paket ini didokumentasikan di file ini.
 Format mengikuti [Keep a Changelog](https://keepachangelog.com/) dan
 [Semantic Versioning](https://semver.org/), dihasilkan otomatis oleh Changesets.
 
+## 0.1.4
+
+### Patch Changes
+
+- [#22](https://github.com/rempugwarga/design-system/pull/22) [`f58d01a`](https://github.com/rempugwarga/design-system/commit/f58d01a0600aa1af0b0d810995550ce75bc1a9d3) Thanks [@ruangbercerita182-tech](https://github.com/ruangbercerita182-tech)! - Aktifkan `changesets/action@v2` yang sebenarnya: perubahan workflow pada PR migrasi sebelumnya tidak ikut ter-commit, sehingga rilis 0.1.3 masih memakai action v1 tanpa push git tag/GitHub Release. Kini git tag dan GitHub Release dibuat otomatis saat publish.
+
 ## 0.1.3
 
 ### Patch Changes
