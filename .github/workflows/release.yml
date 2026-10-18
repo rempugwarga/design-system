@@ -38,14 +38,14 @@ jobs:
       - name: Build package (dist untuk publish)
         run: bun run build
       - name: Create release PR atau publish paket
-        uses: changesets/action@v1
+        uses: changesets/action@v2
         with:
-          version: bun run version-packages
-          publish: bun run release
-          commit: "chore: release @rempugwarga/design-system"
-          title: "chore: release @rempugwarga/design-system"
+          version-script: bun run version-packages
+          publish-script: bun run release
+          commit-message: "chore: release @rempugwarga/design-system"
+          pr-title: "chore: release @rempugwarga/design-system"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Provenance ditandatangani melalui OIDC; aktifkan Trusted Publisher
           # untuk package ini di registry. Jika registry belum mendukung,
           # sediakan NPM_TOKEN melalui GitHub Environment (bukan di repo).
