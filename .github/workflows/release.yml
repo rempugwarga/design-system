@@ -35,6 +35,8 @@ jobs:
       - name: Update npm
         run: npm install -g npm@latest
       - run: bun install --frozen-lockfile
+      - name: Build package (dist untuk publish)
+        run: bun run build
       - name: Create release PR atau publish paket
         uses: changesets/action@v1
         with:
