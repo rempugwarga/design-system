@@ -6,6 +6,13 @@ set -euo pipefail
 
 base="${1:-origin/main}"
 
+# PR dari changesets bot (changeset-release/*) justru MENGONSUMSI changeset
+# untuk menaikkan versi — gate tidak berlaku.
+if [[ "${GITHUB_HEAD_REF:-}" == changeset-release/* ]]; then
+  echo "PR rilis versi (${GITHUB_HEAD_REF}) — changeset tidak diperlukan."
+  exit 0
+fi
+
 changed="$(git diff --name-only "${base}"...HEAD)"
 
 if [ -z "$changed" ]; then
