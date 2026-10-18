@@ -4,6 +4,12 @@ Semua perubahan penting pada paket ini didokumentasikan di file ini.
 Format mengikuti [Keep a Changelog](https://keepachangelog.com/) dan
 [Semantic Versioning](https://semver.org/), dihasilkan otomatis oleh Changesets.
 
+## 0.1.3
+
+### Patch Changes
+
+- [#20](https://github.com/rempugwarga/design-system/pull/20) [`477468d`](https://github.com/rempugwarga/design-system/commit/477468d7fa66a5f1c361358c4592860dbc7008ff) Thanks [@ruangbercerita182-tech](https://github.com/ruangbercerita182-tech)! - Pipeline rilis dimigrasikan ke `changesets/action@v2`. Git tag dan GitHub Release kini dibuat otomatis saat publish (sebelumnya dengan action v1 + changeset CLI v3, tag tidak ter-push dan Release tidak terbentuk).
+
 ## 0.1.2
 
 ### Patch Changes
