@@ -53,6 +53,9 @@ export default defineConfig({
   plugins: [
     pluginReact(),
     pluginModuleFederation(moduleFederationConfig),
-    pluginPublint(),
+    // Storybook (storybook-addon-rslib) membangun rslib tanpa dist/ library;
+    // publint hanya relevan untuk build paket — dinonaktifkan via SKIP_PUBLINT
+    // di script storybook/build:storybook.
+    ...(process.env.SKIP_PUBLINT === '1' ? [] : [pluginPublint()]),
   ],
 });

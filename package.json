@@ -27,9 +27,9 @@
   ],
   "scripts": {
     "build": "rslib build",
-    "build:storybook": "storybook build",
+    "build:storybook": "SKIP_PUBLINT=1 storybook build",
     "dev": "rslib build --watch",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "SKIP_PUBLINT=1 storybook dev -p 6006",
     "mf-dev": "rslib mf-dev",
     "typecheck": "tsc --noEmit",
     "test": "rstest run",
