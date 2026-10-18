@@ -38,7 +38,7 @@ jobs:
       - name: Build package (dist untuk publish)
         run: bun run build
       - name: Create release PR atau publish paket
-        uses: changesets/action@v1
+        uses: changesets/action@v2
         with:
           version: bun run version-packages
           publish: bun run release
